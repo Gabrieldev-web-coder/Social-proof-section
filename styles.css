@@ -1,3 +1,11 @@
+/**Background**/
+
+body{
+    font-family: 'Spartan', sans-serif;
+    background-image: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+}
+
 /**Layout**/
 
 .SPC{
@@ -5,5 +13,56 @@
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-template-rows: auto;
     grid-template-areas:
-    "";
+    "SPC_H"
+    "SPC_R"
+    "SPC_C";
+}
+
+.SPC_heading-title,.SPC_rated-span{color:hsl(300, 43%, 22%);}
+
+.SPC_cards-names-last{color:hsl(333, 80%, 67%);}
+
+.SPC_cards-names-first{color: hsl(0, 0%, 100%);}
+
+.SPC_cards-description-p{
+    color:hsl(300, 24%, 96%);
+}
+
+.SPC_heading-text{
+    color:hsl(303, 10%, 53%);
+    font-weight: 500;
+}
+
+.SPC_cards-header{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.SPC_cards_figure{
+    margin: 1rem 1rem 0px 0px;
+}
+
+.SPC_cards-container{
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem;
+    line-height: 1.5rem;
+    font-size: 15px;
+}
+
+.SPC_heading-title{margin-top:4rem;}
+
+.SPC_heading{
+    grid-area:SPC_H;
+    text-align: center;
+}
+
+.SPC_rated{
+    grid-area:SPC_R;
+}
+
+.SPC_cards{
+    grid-area:SPC_C;
 }
