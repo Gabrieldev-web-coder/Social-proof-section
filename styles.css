@@ -68,25 +68,32 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .SPC_rated-span-container{
     margin: .5rem;
     min-width: 296px;
-    height: 105px;
+    height: 90px;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
     background-color: hsl(300, 24%, 96%);
     border-radius: 15px;
 }
 
-.icon-star{
-    mask-repeat:repeat-x;
+.SPC_rated-span-container-svg{
+    background-image:url(/images/icon-star.svg); 
+    /*Search the value of the propities viewBox, preserveAspectRatio, and width to change his value and put it like background repeat and not repeat svg code*/
+    background-repeat: repeat-x;
+    width: 118px;
+    height: 16px;
 }
 
+
 .SPC_rated-span{
-    margin: 1.5rem;
+    margin: 1rem;
     font-weight: 600;
     font-size: 14px;
 
