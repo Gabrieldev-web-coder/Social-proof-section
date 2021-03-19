@@ -4,6 +4,8 @@ body{
     font-family: 'Spartan', sans-serif;
     background-image: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
     background-repeat: no-repeat;
+    /**Fijar los svgs de fondo**/
+    /**Mantener las widts fijos del mobile**/
 }
 
 /**Layout**/
@@ -29,6 +31,8 @@ body{
 .SPC_heading-text{
     color:hsl(303, 10%, 53%);
     font-weight: 500;
+    line-height: 1.6rem;
+
 }
 
 .SPC_cards-header{
@@ -91,7 +95,6 @@ img{
     height: 16px;
 }
 
-
 .SPC_rated-span{
     margin: 1rem;
     font-weight: 600;
@@ -101,4 +104,9 @@ img{
 
 .SPC_cards{
     grid-area:SPC_C;
+}
+
+/*@media screen and (min-width:375px){
+    .SPC_heading-title{margin: 4rem 1rem 1rem; width: 95%;}
+    .SPC_heading-text{line-height: 1.6rem; margin: 0px 6px 2rem 6px;}
 }
