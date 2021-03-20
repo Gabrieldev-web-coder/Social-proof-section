@@ -3,9 +3,8 @@
 body{
     font-family: 'Spartan', sans-serif;
     background-image: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
-    background-repeat: no-repeat;
-    /**Fijar los svgs de fondo**/
-    /**Mantener las widts fijos del mobile**/
+    background-repeat: no-repeat, no-repeat;
+    background-position: center 0vw, bottom 0vh center;
 }
 
 /**Layout**/
@@ -32,7 +31,7 @@ body{
     color:hsl(303, 10%, 53%);
     font-weight: 500;
     line-height: 1.6rem;
-
+    margin: 0rem .3rem 1rem .3rem;
 }
 
 .SPC_cards-header{
@@ -60,7 +59,7 @@ img{
     font-size: 15px;
 }
 
-.SPC_heading-title{margin-top:4rem;}
+.SPC_heading-title{margin: 4rem 1.6rem 1.6rem;}
 
 .SPC_heading{
     grid-area:SPC_H;
@@ -106,7 +105,65 @@ img{
     grid-area:SPC_C;
 }
 
-/*@media screen and (min-width:375px){
-    .SPC_heading-title{margin: 4rem 1rem 1rem; width: 95%;}
-    .SPC_heading-text{line-height: 1.6rem; margin: 0px 6px 2rem 6px;}
+/**Media Queries**/
+
+@media screen and (min-width:365px){
+    .SPC_rated-span-container{min-width:332px;}
 }
+
+@media screen and (min-width:409px){
+    .SPC_heading-title{margin: 4rem 3rem 1.6rem;}
+    .SPC_rated-span-container{min-width: 363px;}
+}
+
+@media screen and (min-width:547px){
+    .SPC_heading-title {margin: 4rem 6rem 1.6rem;}
+    .SPC_heading-text {margin: 0rem 3.3rem 1rem 3.3rem;}
+    .SPC_cards-container {width: 54%;}
+    .SPC_cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:890px){
+    body{
+        background-image: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top left, bottom right;
+    }
+
+    .SPC{
+        grid-template-areas:
+        "SPC_H SPC_R"
+        "SPC_C SPC_C";
+    }
+
+    .SPC_heading-title {
+        text-align: left;
+        font-size: 2.5rem;
+        margin:3rem 3rem 1.6rem;
+    }
+    .SPC_heading-text {text-align: left;}
+
+    .SPC_cards{flex-direction: row;}
+
+    .SPC_rated {
+        grid-area: SPC_R;
+        display: flex;
+        align-items: end;
+        margin-bottom:0;
+        margin-top:2rem;
+    }
+
+    .SPC_rated-span-container:nth-of-type(2){margin-left:2rem;}
+
+    .SPC_rated-span-container:nth-of-type(3){margin-left:4rem;}
+
+    .SPC_rated-span-container-svg:nth-of-type(1){margin-left: 1rem;}
+
+    .SPC_rated-span-container{flex-direction: row;}
+
+}
+
