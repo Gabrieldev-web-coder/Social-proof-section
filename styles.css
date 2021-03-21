@@ -19,6 +19,8 @@ body{
     "SPC_C";
 }
 
+/**Text styles**/
+
 .SPC_heading-title,.SPC_rated-span{color:hsl(300, 43%, 22%); font-weight: 600; }
 
 .SPC_cards-names-last{color:hsl(333, 80%, 67%);}
@@ -34,15 +36,15 @@ body{
     margin: 0rem .3rem 1rem .3rem;
 }
 
+/**Cards styles**/
+
 .SPC_cards-header{
     display: flex;
     justify-content: end;
     align-items: center;
 }
 
-.SPC_cards_figure{
-    margin: 1rem 1.5rem 0.4rem 0rem;
-}
+.SPC_cards_figure{margin: 1rem 1.5rem 0.4rem 0rem;}
 
 img{
     border-radius: 100%;
@@ -52,7 +54,7 @@ img{
 
 .SPC_cards-container{
     background-color: hsl(300, 43%, 22%);
-    border-radius: 15px;
+    border-radius: 12px;
     padding: 1.5rem;
     margin: 1rem;
     line-height: 1.6rem;
@@ -143,15 +145,16 @@ img{
     .SPC_heading-title {
         text-align: left;
         font-size: 2.5rem;
-        margin:3rem 3rem 1.6rem;
+        margin:3rem 3.5rem .6rem;
     }
     .SPC_heading-text {text-align: left;}
 
-    .SPC_cards{flex-direction: row;}
+    .SPC_cards{flex-direction: row; align-items: end;}
 
     .SPC_rated {
         grid-area: SPC_R;
         display: flex;
+        justify-content: center;
         align-items: end;
         margin-bottom:0;
         margin-top:2rem;
@@ -161,9 +164,28 @@ img{
 
     .SPC_rated-span-container:nth-of-type(3){margin-left:4rem;}
 
-    .SPC_rated-span-container-svg:nth-of-type(1){margin-left: 1rem;}
+    .SPC_rated-span-container{height: 56px;}
+
+    .SPC_rated-span-container-svg:nth-of-type(1){margin-left: 1.5rem;}
 
     .SPC_rated-span-container{flex-direction: row;}
 
+    .SPC_cards-container:nth-of-type(2){margin-top:2rem;}
+
+    .SPC_cards-container:nth-of-type(3){margin-top:3rem;}
 }
 
+@media screen and (min-width:1024px){
+    .SPC{padding: 1.5rem;}
+    .SPC_rated-span-container:nth-of-type(2){margin-left:3rem;}
+    .SPC_rated-span-container:nth-of-type(3){margin-left:6rem;}
+    .SPC_rated-span-container {min-width: 408px; justify-content: end;}
+}
+
+@media screen and (min-width:1440px){
+    .SPC{row-gap: 3rem;}
+    .SPC_heading-title{margin: 3rem 7.5rem 0.6rem; font-size: 3.5rem;}
+    .SPC_heading-text {margin: 0rem 7.3rem 1rem;}
+    .SPC_cards-container {width: 22%;}
+    .SPC_cards{justify-content: center;}
+}
