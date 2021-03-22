@@ -88,6 +88,8 @@ img{
     border-radius: 15px;
 }
 
+/**Icon star like background**/
+
 .SPC_rated-span-container-svg{
     background-image:url(/images/icon-star.svg); 
     /*Search the value of the propities viewBox, preserveAspectRatio, and width to change his value and put it like background repeat and not repeat svg code*/
